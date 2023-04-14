@@ -1,0 +1,268 @@
+:root {
+    --slideProImg: 700px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("pictures/backgroundUniverse.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    margin: 0px;
+    font-size: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+p {
+    color: azure;
+    width: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 30px;
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+}
+
+#headshop {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-flow: column;
+    z-index: 10;
+}
+
+#headshop nav {
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+.headcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.headcontent div {
+    margin: 0rem 0.5rem;
+}
+
+.logo {
+    width: 15rem;
+}
+
+.nav-middle {
+    width: 20rem;
+}
+
+.searching-goods {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+.input-searching {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    font-size: 1rem;
+}
+
+.searchbtn {
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.searchingicon {
+    width: 1.5rem;
+}
+
+.input-searching:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+}
+
+.content {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerPro {
+    width: 1000px;
+    position: relative;
+    background: black;
+    /* border: 1px solid white;
+    padding: 1px; */
+}
+
+.headerPro h3 {
+    margin: 0px;
+    height: 50px;
+    background: #0029a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.upperLarge {
+    position: relative;
+}
+
+.arrowbtn {
+    top: 50%;
+    font-size: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.137);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: ease-in-out 150ms;
+    position: absolute;
+}
+
+.arrowbtn:hover {
+    background: rgba(0, 162, 255, 0.563);
+    border: 1px solid rgb(0, 217, 255);
+}
+
+#leftbtn {
+    left: 0px;
+    display: none;
+}
+
+#rightbtn {
+    right: 0px;
+}
+
+.showout {
+    width: inherit;
+    overflow: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
+
+.showout input {
+    display: none;
+}
+
+.bigShow {
+    width: calc(100%);
+    height: auto;
+    object-fit: contain;
+    transition: 1s;
+}
+
+.showout.dragging {
+    cursor: grabbing;
+    scroll-behavior: unset;
+}
+
+.showout.dragging img {
+    pointer-events: none;
+}
+
+.manualslide {
+    white-space: nowrap;
+    font-size: 0;
+    height: auto;
+    width: inherit;
+    overflow: hidden;
+    cursor: pointer;
+    background: black;
+    transition: 1s;
+}
+
+.imgbtn {
+    box-sizing: border-box;
+    object-fit: contain;
+    width: calc(100%/10);
+    height: auto;
+    cursor: pointer;
+}
+
+.imgbtn:hover {
+    border: 1px solid white;
+}
+
+
+#radioBtn5:checked~.first {
+    margin-left: -500%;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .headerPro {
+        width: 800px;
+    }
+
+    .manualslide img {
+        width: calc(100%/8);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .headerPro {
+        width: 600px;
+    }
+
+    .manualslide img {
+        width: calc(100%/3);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .headerPro {
+        width: 400px;
+        font-size: small;
+    }
+
+    .manualslide img {
+        width: calc(100%/8);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .headerPro {
+        width: 350px;
+        font-size: xx-small;
+    }
+
+    .manualslide img {
+        width: calc(100%/7);
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .headerPro {
+        width: 260px;
+        font-size: xx-small;
+    }
+
+    .manualslide img {
+        width: calc(100%/5);
+    }
+}
